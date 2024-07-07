@@ -1,0 +1,202 @@
+/* Font family */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Canvas style */
+body {
+    width: 2000px;
+    height: 2000px;
+    font-family: Arial, sans-serif;
+    background-color: #323232;
+    background-image: 
+    linear-gradient(45deg, #474747 25%, transparent 25%, transparent 75%, #474747 75%, #474747),
+    linear-gradient(45deg, #474747 25%, transparent 25%, transparent 75%, #474747 75%, #474747);
+    background-size: 20px 20px; 
+    background-position: 0 0, 10px 10px; 
+}
+
+/* Prevent text from being higlighted on buttons */
+button, .headbar {
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Styling for the headbar */
+.headbar {
+    background-color: rgb(50, 0, 111);
+    width: 1430px;
+    height: 85px;
+    border: solid black 6px;
+    position: fixed; 
+    top: 30px;
+    left: 30px; 
+    padding-left: 20px;
+    border-radius: 20px;
+    z-index: 1000; 
+}
+
+/* Styling for the button that creates new notes */
+.add__note {
+    border: solid black 4px;
+    background-color: rgb(0, 79, 45);
+    width: 185px;
+    height: 48px;
+    font-size: 22px;
+    margin: 9px;
+    margin-top: 19px;
+    border-radius: 30px;
+}
+
+/* Hover effect for the button that creates new notes */
+.add__note:hover {
+    background-color: rgb(0, 45, 26);
+}
+
+/* Styling for the button that adds vertical lines */
+.add__line {
+    border: solid black 4px;
+    background-color: rgb(167, 0, 0);
+    width: 185px;
+    height: 48px;
+    font-size: 22px;
+    margin: 9px;
+    margin-top: 19px;
+    border-radius: 30px;
+}
+
+/* Hover effect for the button that adds vertical lines */
+.add__line:hover {
+    background-color: rgb(78, 0, 0);
+}
+
+/* Styling for the button that adds horizantal lines */
+.add__hline {
+    border: solid black 4px;
+    background-color: rgb(0, 0, 167);
+    width: 185px;
+    height: 48px;
+    font-size: 22px;
+    margin: 9px;
+    margin-top: 19px;
+    border-radius: 30px;
+}
+
+/* Hover effect for the button that adds horizantal lines */
+.add__hline:hover {
+    background-color: rgb(0, 0, 104);
+}
+
+/* Styling for the button that clears the canvas */
+.clear__all {
+    border: solid black 4px;
+    background-color: rgb(167, 0, 136);
+    width: 145px;
+    height: 48px;
+    font-size: 22px;
+    margin: 9px;
+    margin-top: 19px;
+    border-radius: 30px;
+}
+
+/* Hover effect for the button that clears the canvas */
+.clear__all:hover {
+    background-color: rgb(75, 0, 62);
+}
+
+/* Styling for the resizer element */
+.resizer {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 7.5px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    border: solid black 2px;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+    margin-right: -1px;
+}
+
+/* Styling for notes, vertical lines and horizontal lines */
+.note, .vline, .hline {
+    position: absolute;
+    border: 1px solid #000;
+    overflow: hidden; 
+}
+
+/* Styling for notes */
+.note {
+    width: 175px;
+    height: 150px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background-color: #818181;
+    cursor: move;
+    font-size: 21px;
+    font-weight: bold;
+    z-index: 10;
+    border-radius: 8px;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+/* Styling for vertical lines */
+.vline {
+    width: 15px;
+    height: 200px;
+    background-color: black;
+    z-index: 0;
+    border-radius: 10px;
+    cursor: move;
+}
+
+/* Styling for horizontal lines */
+.hline {
+    width: 200px;
+    height: 15px;
+    background-color: black;
+    z-index: 0;
+    border-radius: 10px;
+    cursor: move;
+}
+
+/* Container for notes */
+#notes-container {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 1500px;
+    height: 1500px;
+}
+
+/* Styling for the draggable bar at the bottom of notes */
+.drag-bar {
+    width: 92%;
+    height: 10px; 
+    background-color: #a3a3a3; 
+    border: solid black 3px;
+    cursor: move;
+    border-radius: 5px;
+    margin-top: -6px;
+    z-index: 900;
+}
+
+/* Styling for the message thats tells you how to delete an element */
+.how_to_delete {
+    color: rgb(255, 0, 0);   
+    font-size: 23px;
+    font-weight: bold;
+    border: none;
+    background: rgba(255, 0, 0, 0);
+}
